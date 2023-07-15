@@ -1,4 +1,4 @@
-const Head = (
+export const Head = (
   <div style={{ 
     width: '50px',
     height: '50px',
@@ -8,9 +8,9 @@ const Head = (
     top: '50px',
     right: '-30px'
   }} />
-)
+);
 
-const Body = (
+export const Body = (
   <div style={{ 
     width: '10px',
     height: '100px',
@@ -21,7 +21,7 @@ const Body = (
   }} />
 )
 
-const RightArm = (
+export const RightArm = (
   <div style={{ 
     width: '100px',
     height: '10px',
@@ -34,7 +34,7 @@ const RightArm = (
   }} />
 )
 
-const LeftArm = (
+export const LeftArm = (
   <div style={{ 
     width: '100px',
     height: '10px',
@@ -47,7 +47,7 @@ const LeftArm = (
   }} />
 )
 
-const RightLeg = (
+export const RightLeg = (
   <div style={{ 
     width: '100px',
     height: '10px',
@@ -60,7 +60,7 @@ const RightLeg = (
   }} />
 )
 
-const LeftLeg = (
+export const LeftLeg = (
   <div style={{ 
     width: '100px',
     height: '10px',
@@ -72,42 +72,3 @@ const LeftLeg = (
     transformOrigin: 'left bottom'
   }} />
 )
-
-export function HangmanDrawing(){
-  return (
-    <div style={{ position: 'relative'}}>
-      { Head }
-      { Body }
-      { RightArm }
-      { LeftArm }
-      { RightLeg }
-      { LeftLeg }
-      <div style={{
-        height: '50px',
-        width: '10px',
-        background: 'black',
-        position: 'absolute',
-        top: 0,
-        right: 0
-       }} />
-      <div style={{
-        height: '10px',
-        width: '200px',
-        background: 'black',
-        marginLeft: '120px'
-       }} />
-      <div style={{
-        height: '400px',
-        width: '10px',
-        background: 'black',
-        marginLeft: '120px'
-       }} />
-      <div style={{
-        height: '10px',
-        width: '250px',
-        background: 'black'
-      }} />
-
-    </div>
-  )
-}
