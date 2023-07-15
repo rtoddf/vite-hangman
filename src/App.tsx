@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { HangmanDrawing } from './HangmanDrawing';
+import { HangmanWord } from './HangmanWord';
+import  { Keyboard } from './Keyboard';
 import words from './wordList.json';
 
 function App() {
@@ -18,7 +21,6 @@ function App() {
       gap: '2rem',
       margin: '0 auto',
       alignItems: 'center',
-      backgroundColor: 'pink'
     }}>
       <div style={{
         fontSize: '2rem',
@@ -26,9 +28,13 @@ function App() {
       }}>
         Lose Win
       </div>
-
+      <HangmanDrawing />
+      <HangmanWord />
+      <Keyboard />
     </div>
   )
 }
 
 export default App
+
+// https://www.youtube.com/watch?v=-ONUyenGnWw&list=WL&index=4&t=2304s
