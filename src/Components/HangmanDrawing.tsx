@@ -15,15 +15,25 @@ import {
   RopeStyled
 } from '../styles/Hangman.styled.js';
 
-export function HangmanDrawing(){
+const BodyParts = [
+  Head,
+  Body,
+  RightArm,
+  LeftArm,
+  RightLeg,
+  LeftLeg
+]
+
+type HangmanDrawaingProps = {
+  numberOfGuesses: number
+}
+
+export function HangmanDrawing(
+  {numberOfGuesses}: HangmanDrawaingProps
+  ){
   return (
     <WrapperStyled>
-      { Head }
-      { Body }
-      { RightArm }
-      { LeftArm }
-      { RightLeg }
-      { LeftLeg }
+      { BodyParts.slice(0, numberOfGuesses) }
       <RopeStyled />
       <TopBarStyled />
       <VerticalBarStyled />
